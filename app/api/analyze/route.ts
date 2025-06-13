@@ -33,7 +33,8 @@ Situation:
       status: 200,
       headers: { "Content-Type": "application/json" },
     });
-  } catch (err: any) {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+} catch (err: any) {
     console.error("API error:", err.message);
     return new Response(
       JSON.stringify({ error: "AI failed. Check your API key or response format." }),
